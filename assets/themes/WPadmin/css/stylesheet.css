@@ -199,7 +199,7 @@ sub,sup{
 	font-size: smaller;
 }
 
-.widefat,div.updated,div.error,textarea,input[type=text],input[type=password],input[type=file],input[type=button],input[type=submit],input[type=reset],input[type=email],input[type=number],input[type=search],input[type=tel],input[type=url],select,.postbox{
+.widefat,div.updated,div.error,div.info-notice,textarea,input[type=text],input[type=password],input[type=file],input[type=button],input[type=submit],input[type=reset],input[type=email],input[type=number],input[type=search],input[type=tel],input[type=url],select,.postbox{
 	border-radius:3px;
 	border-width:1px;
 	border-style:solid
@@ -296,7 +296,7 @@ sub,sup{
 }
 
 
-div.error{
+div.error, div.info-notice{
 	padding:0 .6em;
 	margin:16px 0
 }
@@ -492,7 +492,7 @@ fieldset{
 	text-decoration:none;
 	padding-bottom:2px
 }
-div.error p,div.updated p{
+div.error p,div.updated p,div.info-notice p{
 	margin:.2em 0;
 	padding:2px
 }

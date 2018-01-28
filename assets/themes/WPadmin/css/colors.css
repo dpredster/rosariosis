@@ -103,6 +103,10 @@ div.error{
 	background: #ffebe8;
 	border-color: #c00
 }
+div.info-notice{
+	background: #FAFAD2;
+	border-color: #DAA520
+}
 div.error a{
 	color: #c00
 }

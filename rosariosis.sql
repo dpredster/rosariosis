@@ -3453,6 +3453,18 @@ SELECT pg_catalog.setval('user_profiles_seq', 3, true);
 
 
 --
+-- Name: security_settings; Type: Schema: public; Owner: rosariosis; Tablespace:
+--
+
+CREATE TABLE security_settings (
+    school_id numeric NOT NULL,
+    title character varying(100),
+    settings_value character varying(5)
+);
+
+
+
+--
 -- Data for Name: accounting_incomes; Type: TABLE DATA; Schema: public; Owner: rosariosis
 --
 
@@ -3475,6 +3487,7 @@ SELECT pg_catalog.setval('user_profiles_seq', 3, true);
 --
 
 INSERT INTO address VALUES (0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'No Address', NULL, NULL);
+
 
 
 --
@@ -3576,6 +3589,17 @@ INSERT INTO config VALUES (1, 'SCHOOL_SYEAR_OVER_2_YEARS', 'Y');
 INSERT INTO config VALUES (1, 'ATTENDANCE_FULL_DAY_MINUTES', '300');
 INSERT INTO config VALUES (1, 'STUDENTS_USE_MAILING', NULL);
 INSERT INTO config VALUES (1, 'CURRENCY', '$');
+
+
+--
+-- Data for Name: security_settings; Type: TABLE DATA; Schema: public; Owner: rosariosis
+--
+
+INSERT INTO security_settings VALUES (0, 'PASSWORD_MIN_LENGTH', '8');
+INSERT INTO security_settings VALUES (0, 'SECURE_PASSWORD', 'Y');
+INSERT INTO security_settings VALUES (0, 'MAX_INACTIVE_MINS', '30');
+INSERT INTO security_settings VALUES (0, 'SUSPENSION_DURATION', '1');
+
 
 
 --
@@ -4134,6 +4158,7 @@ INSERT INTO profile_exceptions VALUES (3, 'Student_Billing/StudentPayments.php',
 INSERT INTO profile_exceptions VALUES (3, 'Student_Billing/DailyTransactions.php', 'Y', NULL);
 INSERT INTO profile_exceptions VALUES (3, 'Student_Billing/Statements.php&_ROSARIO_PDF', 'Y', NULL);
 INSERT INTO profile_exceptions VALUES (1, 'Students/StudentBreakdown.php', 'Y', 'Y');
+INSERT INTO profile_exceptions VALUES (1, 'Security/SecuritySettings.php', 'Y', 'Y');
 
 
 --

@@ -54,11 +54,14 @@ module.exports = function(grunt) {
 						'assets/js/tipmessage/main16.js',
 						'assets/js/jscalendar/calendar.js',
 						'assets/js/jscalendar/calendar-setup.js',
-						'assets/js/jscalendar/calendar-setup.js',
 						'assets/js/colorbox/jquery.colorbox-min.js',
 						'assets/js/showdown/showdown.min.js',
 						'assets/js/jquery-fixedmenu/jquery-fixedmenu.min.js',
-						'assets/js/jquery-captcha/jquery-captcha.js'
+						'assets/js/jquery-captcha/jquery-captcha.js',
+						'assets/js/jquery-ui/jquery-ui.js',
+						'assets/js/jquery-blockUI/jquery.blockUI.js',
+						'assets/js/jquery-storage-api/jquery.storageapi.js',
+						'assets/js/jquery-idleTimeout-plus/jquery-idleTimeout-plus.js'
 					]
 				}
 			}
@@ -94,7 +97,9 @@ module.exports = function(grunt) {
 						'assets/themes/WPadmin/css/font.css',
 						'assets/themes/WPadmin/css/stylesheet.css',
 						'assets/themes/WPadmin/css/zresponsive.css',
-						'assets/themes/WPadmin/css/rtl.css'
+						'assets/themes/WPadmin/css/rtl.css',
+						'assets/themes/WPadmin/css/jquery-idleTimeout-plus.css',
+						'assets/themes/WPadmin/css/jquery-ui.css'
 					],
 					'assets/themes/WPadmin/stylesheet_wkhtmltopdf.css': [
 						'assets/themes/WPadmin/css/colors.css',

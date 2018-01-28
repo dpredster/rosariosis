@@ -416,7 +416,7 @@ function Warehouse( $mode )
 	<style>.highlight,.highlight-hover:hover{background-color:<?php echo Preferences( 'HIGHLIGHT' ); ?> !important;}</style>
 	<?php if ( $_ROSARIO['page'] === 'modules'
 		|| $_ROSARIO['page'] === 'create-account' ) : ?>
-	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery-3.2.1.js"></script>
 	<script src="assets/js/plugins.min.js?v=<?php echo ROSARIO_VERSION; ?>"></script>
 	<script src="assets/js/warehouse.min.js?v=<?php echo ROSARIO_VERSION; ?>"></script>
 	<script src="assets/js/jscalendar/lang/calendar-<?php echo file_exists( 'assets/js/jscalendar/lang/calendar-' . $lang_2_chars . '.js' ) ? $lang_2_chars : 'en'; ?>.js"></script>
@@ -438,6 +438,7 @@ function Warehouse( $mode )
 <?php
 			else :
 ?>
+<?php require_once 'auto_logout.php'; ?>
 <div id="wrap">
 	<footer id="footer" class="mod">
 		<?php require_once 'Bottom.php'; // Include Bottom menu. ?>

@@ -372,12 +372,19 @@ if ( empty( $_SESSION['STAFF_ID'] )
 		{
 			$note[] = _( 'If you supplied a correct email address then please check your email for the password reset instructions.' );
 		}
+		
+		// Auto logout message.
+		elseif ( $_REQUEST['reason'] == 'session_expire' )
+		{
+			$info[] = _( 'Your session has expired due to inactivity. To continue working you must login again.' );
+		}
 	}
 
 	echo ErrorMessage( $error );
 
 	echo ErrorMessage( $note, 'note' );
 
+	echo ErrorMessage( $info, 'info' );
 ?>
 
 	<table>

@@ -56,6 +56,11 @@ function ErrorMessage( $errors, $code = 'error' )
 	{
 		$return .= '<div class="error"><p>' . button( 'warning' ) . '&nbsp;<b>' . _( 'Warning' ) . ':</b> ';
 	}
+	// Info.
+	elseif ( $code === 'info' )
+	{
+		$return .= '<div class="info-notice" ><p><b>' . _( 'Notice' ) . ':</b> ';
+	}
 	// Note / Update.
 	else
 	{

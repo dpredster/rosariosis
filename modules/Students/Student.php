@@ -198,7 +198,13 @@ if ( $_REQUEST['modfunc'] === 'update'
 							}
 							if ( $column=='PASSWORD' && !empty($value) && $value!==str_repeat('*',8))
 							{
-								$value = str_replace("''","'",$value);
+								// If secure password in effect validate password before encryption
+								if (SecurityConfig('SECURE_PASSWORD') === 'Y') {
+								    $value = validate_password($value);
+								}
+								else {
+								    $value = str_replace("''","'",$value);
+								}
 								$sql .= $column."='".encrypt_password($value)."',";
 								$go = true;
 							}
@@ -294,7 +300,13 @@ if ( $_REQUEST['modfunc'] === 'update'
 								$values .= "'" . $value . "',";
 							else
 							{
-								$value = str_replace("''","'",$value);
+								// If secure password in effect validate password before encryption
+								if (SecurityConfig('SECURE_PASSWORD') === 'Y') {
+								    $value = validate_password($value);
+								}
+								else {
+								    $value = str_replace("''","'",$value);
+								}
 								$values .= "'".encrypt_password($value)."',";
 							}
 						}

@@ -534,3 +534,12 @@ var hideHelp = function() {
 var expandMenu = function() {
 	$('#menu,#menuback').toggleClass('hide');
 }
+
+// Call automatic logout script after minutes of inactivity set in Security Settings
+var autoLogout = function() {
+	jQuery(document).ready(function() {
+    IdleTimeoutPlus.start({
+        idleTimeLimit: max_min //Minutes set in Security Settings.
+    });
+	});
+}
